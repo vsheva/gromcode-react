@@ -8,6 +8,7 @@ import "./styles.css"
 const rootElement = document.querySelector('#root');
 
 const renderGreeting = elem => {
+
   const elementReact = (
       <div className="greeting">
       <h1  className="greeting__title">Hello, world!</h1>
