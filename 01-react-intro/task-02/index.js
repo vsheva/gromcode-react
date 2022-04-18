@@ -3,7 +3,7 @@
 
 const rootElement = document.querySelector('#root');
 
-const renderGreeting = rootElement => {
+const renderGreeting = elem => {
 
     const element = React.createElement(
         "div",
@@ -23,7 +23,7 @@ const renderGreeting = rootElement => {
         ]
     )
     //что отрисовать,   где
-    ReactDOM.render(element, rootElement)
+    ReactDOM.render(element, elem)
 }
 
 renderGreeting(rootElement);
