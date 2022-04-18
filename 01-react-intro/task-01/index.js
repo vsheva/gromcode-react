@@ -1,33 +1,12 @@
-const rootElem = document.querySelector("#root");
+const rootElem = document.querySelector('#root');
 
 const elem = React.createElement(
-    "div",
-    {className: "greeting"},
-    "Hello, Valera! I'm from React!"
-)
+  'div',
+  { className: 'greeting' },
+  "Hello, Valera! I'm from React!",
+);
 
-ReactDOM.render(elem, rootElem)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ReactDOM.render(elem, rootElem);
 
 // const rootElement = document.querySelector('#root');
 //

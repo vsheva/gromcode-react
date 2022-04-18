@@ -2,29 +2,19 @@
 const rootElement = document.querySelector('#root');
 
 const renderGreeting = rootElement => {
+  const element = React.createElement(
+    'div',
+    { className: 'greeting' },
 
-    const element = React.createElement(
-        "div",
-        {className: "greeting"},
+    React.createElement('h1', { className: 'greeting__title' }, 'Hello, world!'),
 
-        React.createElement(
-            "h1",
-            {className: "greeting__title"},
-            'Hello, world!'
-        ),
-
-        React.createElement(
-            "p",
-            {className: "greeting__text"},
-            'I\'m learning React'
-        )
-    );
-    //что отрисовать,  где
-    ReactDOM.render(element, rootElement)
-}
+    React.createElement('p', { className: 'greeting__text' }, "I'm learning React"),
+  );
+  //что отрисовать,  где
+  ReactDOM.render(element, rootElement);
+};
 
 renderGreeting(rootElement);
-
 
 // const renderGreeting = elem => {
 //     const containerElem = document.createElement('div');
@@ -44,7 +34,6 @@ renderGreeting(rootElement);
 // };
 //
 // renderGreeting(rootElement);
-
 
 // const rootElement = document.querySelector('#root');
 //
