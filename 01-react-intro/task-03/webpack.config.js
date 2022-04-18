@@ -1,7 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const path = require('path');
 
 module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'review_build'),
+    },
     module: {
         rules: [
             {
@@ -12,19 +16,6 @@ module.exports = {
                 test:/.css$/,
                 use: ["style-loader", "css-loader"],
             },
-            {
-                test:/.(jpg|png)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8192,
-                            name: '[name].[ext]',
-                            outputPath: 'images',
-                        },
-                    },
-                ],
-            }
         ],
     },
     plugins: [
