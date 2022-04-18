@@ -7,53 +7,23 @@ const renderGreeting = rootElement => {
         "div",
         {className: "greeting"},
 
-            React.createElement(
-                "h1",
-                {className: "greeting__title"},
-                'Hello, world!'
-            ),
+        React.createElement(
+            "h1",
+            {className: "greeting__title"},
+            'Hello, world!'
+        ),
 
-            React.createElement(
-                "p",
-                {className: "greeting__text"},
-                'I\'m learning React'
-            )
+        React.createElement(
+            "p",
+            {className: "greeting__text"},
+            'I\'m learning React'
+        )
     );
-           //что отрисовать,  где
+    //что отрисовать,  где
     ReactDOM.render(element, rootElement)
 }
 
 renderGreeting(rootElement);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // const renderGreeting = elem => {
