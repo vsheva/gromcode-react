@@ -1,6 +1,4 @@
 //input:elem; output:elem
-
-
 const rootElement = document.querySelector('#root');
 
 const renderGreeting = elem => {
@@ -8,7 +6,7 @@ const renderGreeting = elem => {
     const element = React.createElement(
         "div",
         {className: "greeting"},
-        [
+
             React.createElement(
                 "h1",
                 {className: "greeting__title"},
@@ -20,13 +18,42 @@ const renderGreeting = elem => {
                 {className: "greeting__text"},
                 'I\'m learning React'
             )
-        ]
-    )
-    //что отрисовать,   где
+    );
+           //что отрисовать,  где
     ReactDOM.render(element, elem)
 }
 
 renderGreeting(rootElement);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // const renderGreeting = elem => {
