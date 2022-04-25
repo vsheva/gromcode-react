@@ -13,50 +13,40 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
-                    test: /.js$/,
+                    test: /.jsx?$/,
                     use: ["babel-loader"]
                 },
                 {
                     test: /.s?css$/,
                     use: [
-                        isProduction
-                            ? MiniCssExtractPlugin.loader
-                            : "style-loader",
+                        isProduction ? MiniCssExtractPlugin.loader : "style-loader",
                         "css-loader",
-                        "sass-loader",
+                        "sass-loader"
                     ]
-                },
-                {
-                    test: /.(jpg|png)$/,
-                    use: [
-                        {
-                            loader: "url-loader",
-                            options: {
-                                limit: 8192,
-                                name: "[name].[ext]",
-                                outputPath: "images",
-                            },
-                        },
-                    ],
                 }
-            ],
+            ]
         },
         plugins: [
             new webpack.ProgressPlugin(),
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 template: "./src/index.html"
-            }),
+            })
         ],
+        resolve: {
+            extensions: [".js", ".jsx"]
+        },
         devServer: {
             hot: true
         }
     };
 
     if (isProduction) {
-        config.plugins.push(new MiniCssExtractPlugin({
-            filename: "[name].css",
-        }));
+        config.plugins.push(
+            new MiniCssExtractPlugin({
+                filename: "[name].css"
+            })
+        );
     }
 
     return config;
