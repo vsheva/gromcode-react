@@ -9,7 +9,7 @@ const rootElem = document.querySelector('#root');
 
 
 
-ReactDOM.render(<Search name="Tom" age={17} />, rootElem);
+ReactDOM.render(<Search name="Tom" />, rootElem);
 
 
 
