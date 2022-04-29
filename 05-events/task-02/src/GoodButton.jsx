@@ -4,9 +4,7 @@ import "./goodButton.scss"
 
 class GoodButton extends React.Component {
     handleClick(e) {
-         console.log(e.target.textContent);
-         console.log(e);
-        alert("Click me!")
+        alert(e.target.textContent)
     }
 
     render() {
