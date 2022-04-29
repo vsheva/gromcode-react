@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import "./goodButton.scss"
 
 const GoodButton =() => (
-    <button
-        className="fancyButton"
-        onClick={()=> alert("Good job!")}
-    >
-      Click me!
-    </button>
-)
+        <button
+            className="fancy-button"
+            onClick={()=> alert("Good job!")}
+        >
+            Click me!
+        </button>
+    )
+
+
 
 
 
