@@ -9,3 +9,35 @@ const rootElem = document.querySelector('#root');
 //const element = <App />
 
 ReactDOM.render( <App />,rootElem);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
