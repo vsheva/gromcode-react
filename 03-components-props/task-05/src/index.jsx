@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Clock from './Clock.jsx';
+import GoodButton from './GoodButton.jsx';
 
 const userData = {
   firstName: 'James',
@@ -13,7 +13,7 @@ const userData = {
 const rootElem = document.querySelector('#root');
 
 ReactDOM.render(
-  <Clock
+  <GoodButton
  userData={userData}
   />,
   rootElem
