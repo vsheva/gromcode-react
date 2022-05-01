@@ -5,12 +5,12 @@ class Toggler extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            condition:"off"};
+            condition:"Off"};
     }
 
 
-    handleClick(e){
-        this.setState({condition:this.state.condition==="off" ? this.state.condition="on" : this.state.condition="off"});
+    handleClick(){
+        this.setState({condition:this.state.condition==="Off" ? this.state.condition="On" : this.state.condition="Off"});
     }
 
 
