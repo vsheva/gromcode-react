@@ -9,8 +9,9 @@ class Toggler extends Component {
     }
 
 
-    handleClick(){
-        this.setState({condition:this.state.condition==="Off" ? this.state.condition="On" : this.state.condition="Off"});
+    handleClick(e){
+        let upgrade = this.state.condition==="Off" ? this.state.condition="On" : this.state.condition="Off"
+        this.setState({condition:upgrade});
     }
 
 
