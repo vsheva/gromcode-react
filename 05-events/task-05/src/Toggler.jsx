@@ -10,8 +10,7 @@ class Toggler extends Component {
 
 
     handleClick(){
-
-        this.setState({condition:this.state.condition==="off" ? "on" : "off"});
+        this.setState({condition:this.state.condition==="off" ? this.state.condition="on" : this.state.condition="off"});
     }
 
 
