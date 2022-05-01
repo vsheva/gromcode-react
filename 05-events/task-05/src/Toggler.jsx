@@ -10,7 +10,7 @@ class Toggler extends Component {
 
 
     handleClick(e){
-        let upgrade = this.state.condition==="Off" ? this.state.condition="On" : this.state.condition="Off"
+        const upgrade = this.state.condition==="Off" ? this.state.condition="On" : this.state.condition="Off"
         this.setState({condition:upgrade});
     }
 
