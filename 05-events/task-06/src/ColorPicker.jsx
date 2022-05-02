@@ -21,9 +21,9 @@ constructor(props) {
             <div>
                 <div className="picker__title">{this.state.buttonName}</div>
                 <div>
-                    <button className="picker__button picker__button_coral"  onMouseEnter={()=>this.changeTitle("coral")} onMouseLeave={()=>this.clearTitle()}></button>
-                    <button className="picker__button picker__button_aqua" onMouseEnter={()=>this.changeTitle("aqua")} onMouseLeave={()=>this.clearTitle()} ></button>
-                    <button className="picker__button picker__button_bisque" onMouseEnter={()=>this.changeTitle("bisque")} onMouseLeave={()=>this.clearTitle()}></button>
+                    <button className="picker__button picker__button_coral"  onMouseEnter={()=>this.changeTitle("Coral")} onMouseLeave={()=>this.clearTitle()}></button>
+                    <button className="picker__button picker__button_aqua" onMouseEnter={()=>this.changeTitle("Aqua")} onMouseLeave={()=>this.clearTitle()} ></button>
+                    <button className="picker__button picker__button_bisque" onMouseEnter={()=>this.changeTitle("Bisque")} onMouseLeave={()=>this.clearTitle()}></button>
                 </div>
             </div>
 
