@@ -1,0 +1,16 @@
+
+$blue: #6495ed;
+
+.btn {
+  height: 48px;
+  color: #fff;
+  border-radius: 8px;
+  width: 120px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  padding: 8px;
+  cursor: pointer;
+  background-color: $blue;
+  margin: 8px;
+}

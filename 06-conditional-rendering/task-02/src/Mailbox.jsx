@@ -37,9 +37,9 @@ export default Mailbox;
 
 //2. props
 // import React from 'react';
-// import './mailbox.scss'
+// import './page.scss'
 
-// const Mailbox = (props) => {
+// const Page = (props) => {
 //     return (
 //         <div className="mailbox">
 //             <span className="mailbox__text">Messages</span>
@@ -53,4 +53,4 @@ export default Mailbox;
 // //1 && 0 && false //0
 // //React пропускает отрисовку для для значений false, null, undefined
 //
-// export default Mailbox;
+// export default Page;
