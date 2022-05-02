@@ -24,8 +24,8 @@ class Auth extends Component {
 
     render() {
         let button = this.state.isLoggedIn
-            ? <Login onLogin={this.handleLogin}/>
-            : <Logout onLogout={this.handleLogout}/>
+            ? <Logout onLogout={this.handleLogout}/>
+            : <Login onLogin={this.handleLogin}/>
 
 
         {/*// ? <button onClick={ this.handleLogout}>Logout</button>*/
