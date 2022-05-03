@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Online from './Online.jsx';
 import Offline from './Offline.jsx';
 
-
-
 // class Status extends Component {
 //   constructor(props) {
 //     super(props);
@@ -22,15 +20,13 @@ import Offline from './Offline.jsx';
 //   }
 // }
 
-
 //refactoring
 
-const Status = (props)=> {
+const Status = props => {
   if (props.isOnline) {
-    return <Online />
+    return <Online />;
   }
-  return <Offline />
-}
-
+  return <Offline />;
+};
 
 export default Status;
