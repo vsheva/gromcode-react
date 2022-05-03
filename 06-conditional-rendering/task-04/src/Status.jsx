@@ -8,7 +8,7 @@ class Status extends Component {
         super(props)
 
         this.state = {
-            status:true
+            status:props.isOnline
         };
     }
 
@@ -16,8 +16,8 @@ class Status extends Component {
     render() {
 
         return (<div>
-            this.state.status ? <Offline/> : <Online/>
-        </div>)
+            this.state.status ? <Offline /> : <Online />
+        </div> )
     }
 }
 
