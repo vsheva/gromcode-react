@@ -10,4 +10,3 @@ const NumbersList = ({ numbers }) => {
   );
 };
 export default NumbersList;
-
