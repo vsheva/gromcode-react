@@ -1,10 +1,8 @@
 import React from 'react';
-import './login.scss'
-
+import './login.scss';
 
 const Login = props => {
-    return <button onClick={props.onLogin}>Login</button>
-}
-
+  return <button onClick={props.onLogin}>Login</button>;
+};
 
 export default Login;

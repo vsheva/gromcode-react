@@ -8,7 +8,7 @@ class Counter extends Component {
         this.state = {
             counter: props.start
         }
-        //no this
+
         setInterval(() => {
             this.setState({
                 counter: this.state.counter + 1

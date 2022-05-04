@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 
 const UserGreeting = props => {
-    return <h1>Hello, user 😎</h1>
-}
-
+  return <h1>Hello, user 😎</h1>;
+};
 
 export default UserGreeting;

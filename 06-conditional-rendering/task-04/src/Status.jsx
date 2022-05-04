@@ -22,6 +22,8 @@ import Offline from './Offline.jsx';
 
 //refactoring
 
+
+
 const Status = props => {
   if (props.isOnline) {
     return <Online />;
