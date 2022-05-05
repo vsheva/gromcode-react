@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import TransactionsList from './TransactionsList.jsx';
+import Demo from './Demo.jsx';
 
 const rootElem = document.querySelector('#root');
 
@@ -28,4 +28,4 @@ const users = [
   },
 ];
 
-ReactDOM.render(<TransactionsList users={users} />, rootElem);
+ReactDOM.render(<Demo users={users} />, rootElem);
