@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import User from './User.jsx';
 
-//1.destructure
+
 
 class UsersList extends Component {
   constructor(props) {
@@ -14,18 +14,24 @@ class UsersList extends Component {
 
   toggleSorting = () => {
     const newSorting = this.state.sorting === 'asc' ? 'desc' : 'asc';
-
-    this.setState({ sorting: newSorting });
+    this.setState({
+      sorting: newSorting
+    });
   };
 
+
+
   render() {
-    console.log(this.props.users);
+   console.log(this.props.users) //данные массива, которые приходят через свойство
     let usersList;
+    //сортировка не сразу - проверить, есть ли сортировка
     if (this.state.sorting) {
       usersList = this.props.users
         .slice()
         .sort((a, b) => (this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age));
     } else {
+      // если сортировка никакая не установлена- то отрисовывать неизменный массив пользователей,
+      // которые получаем через properties (props, свойства)
       usersList = this.props.users;
     }
 
@@ -35,11 +41,7 @@ class UsersList extends Component {
           {this.state.sorting || '-'}
         </button>
 
-        <ul className="users">
-          {usersList.map(user => (
-            <User key={user.name} {...user} />
-          ))}
-        </ul>
+        <ul className="users">{usersList.map(user => (<User key={user.name} name={user.name} age={user.age} />))}</ul>
       </div>
     );
   }
