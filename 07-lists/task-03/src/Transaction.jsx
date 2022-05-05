@@ -1,0 +1,16 @@
+import React from 'react';
+import moment from 'moment';
+
+const Transaction = ({ from, to, amount, rate, time }) => {
+  return (
+    <li className="transaction">
+      <span className="transaction__date">{moment(new Date(time)).format('MMM Do')};</span>
+      <span className="transaction__time">{moment(new Date(time)).format('h:mm')}</span>
+      <span className="transaction__assets">{`${from} → ${to}`}</span>
+      <span className="transaction__rate">{rate}</span>
+      <span className="transaction__amount">{new Intl.NumberFormat('en-GB').format(amount)}</span>
+    </li>
+  );
+};
+
+export default Transaction;
