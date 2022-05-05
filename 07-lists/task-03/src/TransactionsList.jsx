@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Transaction from './Transaction.jsx';
 
-class TransactionList extends Component {
+class TransactionsList extends Component {
   constructor(props) {
     super(props);
   }
@@ -18,4 +18,4 @@ class TransactionList extends Component {
   }
 }
 
-export default TransactionList;
+export default TransactionsList;
