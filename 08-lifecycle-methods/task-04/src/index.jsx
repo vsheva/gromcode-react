@@ -5,5 +5,4 @@ import User from './User.jsx';
 
 const rootElem = document.querySelector('#root');
 
-
 ReactDOM.render(<User userId="facebook" />, rootElem);
