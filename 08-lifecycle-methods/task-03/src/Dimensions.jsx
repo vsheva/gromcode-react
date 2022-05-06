@@ -8,24 +8,24 @@ class Dimensions extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
-
     const { innerWidth, innerHeight } = window;
     this.setDimensions(innerWidth, innerHeight);
   }
 
   componentWillUnmount() {
-    window.addEventListener('resize', this.handleResize);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize = e => {
     const { innerWidth, innerHeight } = e.target;
+
     this.setDimensions(innerWidth, innerHeight);
   };
 
   setDimensions = (width, height) => {
     this.setState({
-      width: width,
-      height: height,
+      width,
+      height,
     });
     document.title = `${innerWidth} x ${innerHeight}`;
   };
