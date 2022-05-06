@@ -5,6 +5,4 @@ import Dimensions from './Dimensions.jsx';
 
 const rootElem = document.querySelector('#root');
 
-
-
-ReactDOM.render(<Dimensions />, rootElem);
+ReactDOM.render(<Dimensions  />, rootElem);
