@@ -5,7 +5,7 @@ class ConnectionStatus extends Component {
     super(props);
 
     this.state = {
-      isOnline: true,
+      isOnline: "online",
     };
   }
 
@@ -20,19 +20,24 @@ class ConnectionStatus extends Component {
   }
 
   onlineHandler() {
-    this.setState({ isOnline: true });
+    this.setState({ isOnline: "online" });
   }
 
   offlineHandler() {
-    this.setState({ isOnline: false });
+    this.setState({ isOnline: "offline" });
   }
 
   render() {
     return (
-      <div className={this.state.isOnline === true ? 'status' : 'status status_offline'}>
-        {this.state.isOnline}
-      </div>
-    );
+        <div className={this.state.isOnline === "offline"
+            ? 'status_offline'
+            : 'status'}
+        >
+            {this.state.isOnline }
+        </div>
+        )
+
+
   }
 }
 
