@@ -34,7 +34,9 @@ class ConnectionStatus extends Component {
 
 export default ConnectionStatus;
 
+
 //refactoring
+
 // componentDidMount() {
 //   window.addEventListener('online', this.statusHandler);
 //   window.addEventListener('offline', this.statusHandler);
