@@ -9,23 +9,42 @@ class ConnectionStatus extends Component {
     };
   }
 
+  // componentDidMount() {
+  //   window.addEventListener('online', this.onlineHandler);
+  //   window.addEventListener('offline', this.offlineHandler);
+  // }
+  //
+  // componentWillUnmount() {
+  //   window.removeEventListener('online', this.onlineHandler);
+  //   window.removeEventListener('offline', this.offlineHandler);
+  // }
+  //
+  // onlineHandler() {
+  //   this.setState({ isOnline: 'online' });
+  // }
+  //
+  // offlineHandler() {
+  //   this.setState({ isOnline: 'offline' });
+  // }
+  //
+  //
+
+
   componentDidMount() {
-    window.addEventListener('online', this.onlineHandler);
-    window.addEventListener('offline', this.offlineHandler);
+    window.addEventListener('online', this.statusHandler);
+    window.addEventListener('offline', this.statusHandler);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('online', this.onlineHandler);
-    window.removeEventListener('offline', this.offlineHandler);
+    window.removeEventListener('online', this.statusHandler);
+    window.removeEventListener('offline', this.statusHandler);
   }
 
-  onlineHandler() {
-    this.setState({ isOnline: 'online' });
+  statusHandler(e) {
+    this.setState({ isOnline: e.type});
+    //this.setState({ isOnline: e.type === 'online' });
   }
 
-  offlineHandler() {
-    this.setState({ isOnline: 'offline' });
-  }
 
   render() {
     return (
