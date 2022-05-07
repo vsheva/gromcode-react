@@ -30,14 +30,12 @@ class ConnectionStatus extends Component {
   render() {
     return (
         <div className={this.state.isOnline === "offline"
-            ? 'status_offline'
+            ? 'status status_offline'
             : 'status'}
         >
             {this.state.isOnline }
         </div>
         )
-
-
   }
 }
 
