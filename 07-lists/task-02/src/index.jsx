@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Demo from './Demo.jsx';
+import Search from './Search.jsx';
 
 const rootElem = document.querySelector('#root');
 
@@ -28,4 +28,4 @@ const users = [
   },
 ];
 
-ReactDOM.render(<Demo users={users} />, rootElem);
+ReactDOM.render(<Search users={users} />, rootElem);

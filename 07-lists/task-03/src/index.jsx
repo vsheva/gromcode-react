@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Demo from './Demo.jsx';
+import Search from './Search.jsx';
 
 const rootElem = document.querySelector('#root');
 
@@ -32,4 +32,4 @@ const transactions = [
   },
 ];
 
-ReactDOM.render(<Demo transactions={transactions} />, rootElem);
+ReactDOM.render(<Search transactions={transactions} />, rootElem);
