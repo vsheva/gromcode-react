@@ -17,11 +17,11 @@ class ConnectionStatus extends Component {
     }
 
     statusConnection = event => {
-        console.log(event)
         this.setState({
             status: event.type,
         });
     }
+
 
     render() {
         const statusClass = this.state.status === 'offline'? 'status_offline' : '';
