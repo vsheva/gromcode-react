@@ -48,6 +48,6 @@ export default ConnectionStatus;
 // }
 //
 // statusHandler=(e)=> {
-//   this.setState({ isOnline: e.type});
-//   //this.setState({ isOnline: e.type === 'online' });
+//   this.setState({ isOnline: e.type === 'online' });
+//    // this.setState({ isOnline: e.type});
 // }
