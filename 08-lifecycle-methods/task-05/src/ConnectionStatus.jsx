@@ -15,13 +15,13 @@ class ConnectionStatus extends Component {
     window.removeEventListener('offline', this.offlineHandler);
   }
 
-  onlineHandler = () => {
+  onlineHandler = (() => {
     this.setState({ isOnline: 'online' });
-  };
+  });
 
-  offlineHandler = () => {
+  offlineHandler = (() => {
     this.setState({ isOnline: 'offline' });
-  };
+  });
 
   render() {
     return (
