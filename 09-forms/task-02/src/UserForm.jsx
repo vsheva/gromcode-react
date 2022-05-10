@@ -14,7 +14,7 @@ class UserForm extends Component {
   handleChange = e => {
     const { name, value, checked, type } = e.target;
 
-    const val = (type === 'checkbox' ? checked : value);
+    const val = type === 'checkbox' ? checked : value;
 
     this.setState({
       [name]: val,
