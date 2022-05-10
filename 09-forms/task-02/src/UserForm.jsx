@@ -22,8 +22,9 @@ class UserForm extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
-    this.props.onSubmit(this.state)
+    //log всех свойств состояния
+      console.log(this.state)
+    this.props.onSubmit(this.state);
   };
 
   render() {
@@ -68,8 +69,8 @@ class UserForm extends Component {
           >
             <option value="london">London</option>
             <option value="new-york">New York</option>
-            <option value="sydney">Sidney</option>
-            <option value="berlin">Berlin</option>
+            <option value="coconut">Sidney</option>
+            <option value="mango">Berlin</option>
           </select>
         </div>
         <div className="form-control">
