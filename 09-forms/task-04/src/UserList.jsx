@@ -25,6 +25,9 @@ class UserList extends Component {
           onChange={this.handleChange}
         />
         <ul className="users">
+          {filteredUsers.map(elem => (
+            <User key={elem.id} name={elem.name} age={elem.age} />
+          ))}
           <User name={this.props.name} age={this.props.age} />
         </ul>
       </div>
