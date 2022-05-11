@@ -18,7 +18,7 @@ class UserList extends Component {
 
 
   render() {
-      const filteredUsers = this.props.users.filter(user => user.....)
+      const filteredUsers = this.props.users.filter() ///  застрял
 
 
 
