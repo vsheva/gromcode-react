@@ -12,13 +12,14 @@ class UserList extends Component {
 
   handleChange = e => {
     this.setState({ value: e.target.value });
+
   };
 
 
 
 
   render() {
-      const filteredUsers = this.props.users.filter() ///  застрял
+      const filteredUsers = this.props.users.filter() /// ?
 
 
 
