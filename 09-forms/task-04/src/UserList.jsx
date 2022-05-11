@@ -12,16 +12,10 @@ class UserList extends Component {
 
   handleChange = e => {
     this.setState({ value: e.target.value });
-
   };
 
-
-
-
   render() {
-      const filteredUsers = this.props.users.filter() /// ?
-
-
+    const filteredUsers = this.props.users.filter(); /// ?
 
     return (
       <div>
@@ -31,7 +25,7 @@ class UserList extends Component {
           onChange={this.handleChange}
         />
         <ul className="users">
-          <User name={this.props.name} age={this.props.age}  />
+          <User name={this.props.name} age={this.props.age} />
         </ul>
       </div>
     );
