@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import App from './App.jsx';
+import UserList from './UserList.jsx';
 
 
 const rootElem = document.querySelector('#root');
-//const element = <App />
+//const element = <UserList />
 
-ReactDOM.render( <App />,rootElem);
+ReactDOM.render( <UserList />,rootElem);

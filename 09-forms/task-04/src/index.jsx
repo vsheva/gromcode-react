@@ -1,8 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Search from './Search.jsx';
+import UserList from './UserList.jsx';
 
-const rootElement = document.querySelector('#root');
+const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<Search />, rootElement);
+const users = [
+  {
+    name: 'John',
+    age: 34,
+    id: 1,
+  },
+  {
+    name: 'Valerii',
+    age: 15,
+    id: 2,
+  },
+  {
+    name: 'Ivan',
+    age: 21,
+    id: 23,
+  },
+];
+
+ReactDOM.render(<UserList users={users} />, rootElem);

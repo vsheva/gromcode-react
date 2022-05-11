@@ -6,6 +6,6 @@ import ColorPicker from './ColorPicker.jsx';
 
 
 const rootElem = document.querySelector('#root');
-//const element = <App />
+//const element = <UserList />
 
 ReactDOM.render( <ColorPicker />,rootElem);
