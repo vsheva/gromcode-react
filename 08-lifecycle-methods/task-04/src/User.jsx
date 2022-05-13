@@ -39,7 +39,7 @@ class User extends Component {
 
     return (
       <div className="user">
-        <img alt="User Avatar" src={this.state.user.avatar_url} className="user__avatar" />
+        <img alt="Board Avatar" src={this.state.user.avatar_url} className="user__avatar" />
         <div className="user__info">
           <span className="user__name">{this.state.user.name}</span>
           <span className="user__location">{this.state.user.location}</span>

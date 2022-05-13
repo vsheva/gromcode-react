@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import UserList from './UserList.jsx';
+import Game from './Game.jsx';
 
 
 const rootElem = document.querySelector('#root');
-//const element = <UserList />
+//const element = <Game />
 
-ReactDOM.render( <UserList />,rootElem);
+ReactDOM.render( <Game />,rootElem);

@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
-import User from './User.jsx';
 import Filter from './Filter.jsx';
+import User from './User.jsx';
 
 class UserList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      filterText: '',
     };
   }
 
-  handleChange = e => {
-    this.setState({ value: e.target.value });
+  handleChange = event => {
+    this.setState({ filterText: event.target.value });
   };
 
   render() {
-    const filteredUsers = this.props.users.filter(); /// ?
+    const newUserList = this.props.users.filter(({ name }) => {
+      return name.toUpperCase().includes(this.state.filterText.toUpperCase());
+    });
 
     return (
       <div>
         <Filter
-          filterText={this.props.filterText}
-          count={this.props.count}
+          count={newUserList.length}
           onChange={this.handleChange}
+          filterText={this.state.filterText}
         />
         <ul className="users">
-          {filteredUsers.map(elem => (
+          {newUserList.map(elem => (
             <User key={elem.id} name={elem.name} age={elem.age} />
           ))}
-          <User name={this.props.name} age={this.props.age} />
         </ul>
       </div>
     );

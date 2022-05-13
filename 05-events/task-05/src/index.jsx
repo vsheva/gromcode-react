@@ -6,6 +6,6 @@ import Toggler from './Toggler.jsx';
 
 
 const rootElem = document.querySelector('#root');
-//const element = <UserList />
+//const element = <Game />
 
 ReactDOM.render( <Toggler />,rootElem);

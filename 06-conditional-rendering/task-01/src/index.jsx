@@ -4,6 +4,6 @@ import './index.scss';
 import Status from './Status.jsx';
 
 const rootElem = document.querySelector('#root');
-//const element = <UserList />
+//const element = <Game />
 
 ReactDOM.render(<Status />, rootElem);

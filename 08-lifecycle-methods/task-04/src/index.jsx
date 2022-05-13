@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import User from './User.jsx';
+import Board from './Board.jsx';
 
 const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<User userId="facebook" />, rootElem);
+ReactDOM.render(<Board userId="facebook" />, rootElem);
