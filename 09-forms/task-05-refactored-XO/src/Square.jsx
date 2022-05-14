@@ -23,13 +23,6 @@ export default Square;
 
 
 
-
-
-
-
-
-
-
 //BASE PROJECT
 
 // const props={

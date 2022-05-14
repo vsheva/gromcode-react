@@ -27,9 +27,6 @@ export default Board;
 
 
 
-
-
-
 {
   /*<Square value="1" onClick={() => onClick("dummy value")} />*/
 }

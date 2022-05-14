@@ -47,7 +47,6 @@ const Game = () => {
       );
     });
 
-  //
   let status;
   if (winner) {
     status = `Winner: ${winner}`;
@@ -66,6 +65,11 @@ const Game = () => {
   );
 };
 export default Game;
+
+
+
+
+
 
 //<p>{winner ? 'Winner ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
 
