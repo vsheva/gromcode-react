@@ -19,8 +19,18 @@ export default Square;
 
 
 
-//BASE PROJECT
 
+
+
+
+
+
+
+
+
+
+
+//BASE PROJECT
 
 // const props={
 //     onClick: ()=> "function"
@@ -29,7 +39,6 @@ export default Square;
 //const {onclick} =props;
 // const {value} =props;
 //const{onclick, value} = props
-
 
 //VERSION-1
 // const Square = ({value, onClick}) =>
@@ -53,9 +62,6 @@ export default Square;
 //
 // export default Square;
 
-
-
-
 //original 1
 // import React, { Component } from 'react';
 //
@@ -68,8 +74,6 @@ export default Square;
 // }
 //
 // export default Square;
-
-
 
 //original2
 // import React from 'react';
@@ -86,7 +90,3 @@ export default Square;
 // }
 //
 // export default Square;
-
-
-
-

@@ -8,7 +8,6 @@ const styles = {
 };
 
 const Game = () => {
-   // const [board, setBoard] = useState([Array(9).fill(null)]);
   // const board=useState("state")
   // board[0] this is the state
   // board[1] this is the setter for our state
@@ -18,30 +17,29 @@ const Game = () => {
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(history[stepNumber]);
 
-  const handleClick = (i) => {
+  const handleClick = i => {
     const timeInHistory = history.slice(0, stepNumber + 1);
     const current = timeInHistory[stepNumber];
     const squares = [...current];
 
-                                                                                       //const boardCopy = [...board]//
     // if user click an occupied square or if game is won, return
     if (winner || squares[i]) return;
     //put an X or O in the clicked square
     squares[i] = xIsNext ? 'X' : 'O';
     setHistory([...timeInHistory, squares]);
     setStepNumber(timeInHistory.length);
-                                                                                             // setBoard(boardCopy);
+
     setXisNext(!xIsNext); //return the oposite value
   };
 
-  const jumpTo = (step) => {
+  const jumpTo = step => {
     setStepNumber(step);
     setXisNext(step % 2 === 0); //if 0=> true, else false
   };
 
   const renderMoves = () =>
-      history.map((_step, move) => {
-          const destination = move ? `Go to move#${move}` : 'Go to game start';
+    history.map((_step, move) => {
+      const destination = move ? `Go to move#${move}` : 'Go to game start';
       return (
         <li key={move}>
           <button onClick={() => jumpTo(move)}>{destination}</button>
@@ -50,26 +48,24 @@ const Game = () => {
     });
 
   //
-    let status
-    if(winner) {
-        status = `Winner: ${winner}`;
-    } else {
-        status = `Next player: ${xIsNext ? 'X' : 'O'}`
-    }
-
+  let status;
+  if (winner) {
+    status = `Winner: ${winner}`;
+  } else {
+    status = `Next player: ${xIsNext ? 'X' : 'O'}`;
+  }
 
   return (
     <>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div style={styles}>
-          <div>{status}</div>
+        <div>{status}</div>
         {renderMoves()}
       </div>
     </>
   );
 };
 export default Game;
-
 
 //<p>{winner ? 'Winner ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
 
