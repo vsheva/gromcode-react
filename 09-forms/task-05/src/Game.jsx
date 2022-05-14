@@ -40,7 +40,7 @@ const Game = () => {
 
   const renderMoves = () =>
     history.map((_step, move) => {
-      const destination = move ? `Go to move#${move}` : 'Go to start';
+      const destination = move ? `Go to move#${move}` : 'Go to game start';
       return (
         <li key={move}>
           <button onClick={() => jumpTo(move)}>{destination}</button>
@@ -48,11 +48,20 @@ const Game = () => {
       );
     });
 
+  //
+    let status
+    if(winner) {
+        status = `Winner: ${winner}`;
+    } else {
+        status = `Next player: ${xIsNext ? 'X' : 'O'}`
+    }
+
+
   return (
     <>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div style={styles}>
-        <p>{winner ? 'Winner ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+        <div>{status}</div>
         {renderMoves()}
       </div>
     </>
@@ -61,7 +70,7 @@ const Game = () => {
 
 
 
-
+//<p>{winner ? 'Winner ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
 
 //BASE PROJECT
 
