@@ -14,25 +14,15 @@ const style = {
 //const{squares,onClick}=props
 const Board = ({ squares, onClick }) => (
   <div style={style}>
-    {squares.map((square, i) => (
-      <Square key={i} onClick={() => onClick(i)} value={square} />
+
+    {squares.map((elem, i) => (
+      <Square key={i} onClick={() => onClick(i)} value={elem} />
     ))}
+
   </div>
 );
 
 export default Board;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 {
@@ -72,8 +62,8 @@ export default Board;
 //   renderSquare(i) {
 //     return (
 //         <Square
+//            onClick={() => this.props.onClick(i)}
 //             value={this.props.squares[i]}
-//             onClick={() => this.props.onClick(i)}
 //         />
 //     );
 //   }

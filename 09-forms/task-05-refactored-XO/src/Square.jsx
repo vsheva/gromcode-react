@@ -19,26 +19,6 @@ export default Square;
 
 
 
-//original
-
-// import React from 'react';
-//
-// const Square = ({onClick, value}) => {
-//   return (
-//       <button
-//           className='square'
-//           onClick={onClick}
-//       >
-//         {value}
-//       </button>
-//   );
-// }
-//
-// export default Square;
-
-
-
-
 //BASE PROJECT
 
 
@@ -46,8 +26,8 @@ export default Square;
 //     onClick: ()=> "function"
 //     value:"x"
 // };
-// const {value} =props;
 //const {onclick} =props;
+// const {value} =props;
 //const{onclick, value} = props
 
 
@@ -72,3 +52,41 @@ export default Square;
 //
 //
 // export default Square;
+
+
+
+
+//original 1
+// import React, { Component } from 'react';
+//
+// function Square(props) {
+//   return (
+//       <button className="square" onClick={props.onClick}>
+//         {props.value}
+//       </button>
+//   );
+// }
+//
+// export default Square;
+
+
+
+//original2
+// import React from 'react';
+//
+// const Square = ({onClick, value}) => {
+//   return (
+//       <button
+//           className='square'
+//           onClick={onClick}
+//       >
+//         {value}
+//       </button>
+//   );
+// }
+//
+// export default Square;
+
+
+
+
