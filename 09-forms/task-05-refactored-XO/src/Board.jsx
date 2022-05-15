@@ -15,12 +15,34 @@ const style = {
 const Board = ({ squares, onClick }) => (
   <div style={style}>
     {squares.map((elem, i) => (
-      <Square key={i} onClick={() => onClick(i)} value={elem} />
+      <Square key={i} value={elem} onClick={() => onClick(i)} />
     ))}
   </div>
 );
 
 export default Board;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
