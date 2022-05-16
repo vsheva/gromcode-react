@@ -10,12 +10,22 @@ const style = {
 };
 
 const Square = ({ value, onClick }) => (
+
   <button style={style} className="square" onClick={onClick}>
     {value}
   </button>
 );
 
 export default Square;
+
+
+
+
+
+
+
+
+
 
 //BASE PROJECT
 
