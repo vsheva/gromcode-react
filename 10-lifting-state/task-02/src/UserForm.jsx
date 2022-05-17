@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class UserForm extends Component {
+const UserForm = ({ userData, handleChange }) => {
   // handleChange = event => {
   //    this.props.handleChange(event)
 
@@ -13,26 +13,24 @@ class UserForm extends Component {
   // });
   // };
 
-  render() {
-    return (
-      <form className="user-form">
-        <input
-          type="text"
-          name="firstName"
-          className="user-form__input"
-          value={this.props.userData.firstName}
-          onChange={this.props.handleChange}
-        />
-        <input
-          type="text"
-          name="lastName"
-          className="user-form__input"
-          value={this.props.userData.lastName}
-          onChange={this.props.handleChange}
-        />
-      </form>
-    );
-  }
-}
+  return (
+    <form className="user-form">
+      <input
+        type="text"
+        name="firstName"
+        className="user-form__input"
+        value={userData.firstName}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="lastName"
+        className="user-form__input"
+        value={userData.lastName}
+        onChange={handleChange}
+      />
+    </form>
+  );
+};
 
 export default UserForm;
