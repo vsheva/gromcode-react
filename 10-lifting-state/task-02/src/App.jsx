@@ -21,8 +21,10 @@ class App extends Component {
     });
   };
   render() {
+      const{userData} = this.state
     return (
       <div className="page">
+          <h1>{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
         <main className="content">
           <ShoppingCart userData={this.state.userData} />
 
@@ -34,3 +36,5 @@ class App extends Component {
 }
 
 export default App;
+
+//const {userData} = this.state
