@@ -11,12 +11,12 @@ class App extends Component {
   };
 
   handleChange = event => {
-    const { name, value } = event.target; //магия
+    const { name, value } = event.target; //?
     this.setState({
       //магия
       userData: {
-        ...this.state.userData, //магия
-        [name]: value, //магия
+        ...this.state.userData, //магия ?
+        [name]: value, //магия ?
       },
     });
   };
