@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import BoilingVerdict from './BoilingVerdict.jsx';
 import TemperatureInput from './TemperatureInput.jsx';
 
@@ -20,8 +20,6 @@ function tryConvert(temperature, convert) {
   return rounded.toString();
 }
 
-
-
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
@@ -38,13 +36,11 @@ class Calculator extends React.Component {
     this.setState({ scale: 'f', temperature });
   }
 
-
   render() {
     const scale = this.state.scale;
     const temperature = this.state.temperature;
     const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
-    const fahrenheit =
-      scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+    const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
 
     return (
       <div>
