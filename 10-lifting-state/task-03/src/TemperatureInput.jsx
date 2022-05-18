@@ -11,10 +11,10 @@ class TemperatureInput extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = e => {
     //this.setState({temperature: e.target.value});
     this.props.onTemperatureChange(e.target.value);
-  }
+  };
 
   render() {
     const temperature = this.props.temperature;
@@ -29,3 +29,5 @@ class TemperatureInput extends React.Component {
 }
 
 export default TemperatureInput;
+
+//*
