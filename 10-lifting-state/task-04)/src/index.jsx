@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import UsersList from './UsersList.jsx';
+import Calculator from './Calculator.jsx';
 
 const rootElem = document.querySelector('#root');
 
@@ -23,4 +23,4 @@ const users = [
   },
 ];
 
-ReactDOM.render(<UsersList users={users} />, rootElem);
+ReactDOM.render(<Calculator users={users} />, rootElem);

@@ -15,7 +15,7 @@ const Filter =(props)=> {
 export default Filter;
 
 
-// const Filter = props => {
+// const BoilingVerdict = props => {
 //   return (
 //     <div className="filter">
 //       <span className="filter__count">{props.count}</span>
