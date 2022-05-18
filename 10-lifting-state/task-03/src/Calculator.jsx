@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import BoilingVerdict from './BoilingVerdict.jsx';
 import TemperatureInput from './TemperatureInput.jsx';
 
