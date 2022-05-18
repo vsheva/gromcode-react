@@ -8,7 +8,6 @@ const scaleNames = {
 class TemperatureInput extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   handleChange = e => {
@@ -17,12 +16,12 @@ class TemperatureInput extends React.Component {
   };
 
   render() {
-    const temperature = this.props.temperature;
-    const scale = this.props.scale;
+    // const temperature = this.props.temperature;
+    // const scale = this.props.scale;
     return (
       <fieldset>
-        <legend>Введите температуру в {scaleNames[scale]}:</legend>
-        <input value={temperature} onChange={this.handleChange} />
+        <legend>Введите температуру в {scaleNames[this.props.scale]}:</legend>
+        <input value={this.props.temperature} onChange={this.handleChange} />
       </fieldset>
     );
   }

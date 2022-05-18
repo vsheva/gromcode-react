@@ -25,23 +25,37 @@ function tryConvert(temperature, convert) {
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-   //*
-    this.state = { temperature: '', scale: 'c' };
+    //*
+    this.state = {
+      temperature: '',
+      scale: 'c',
+    };
   }
 
-  handleCelsiusChange=(temperature)=>{
-    this.setState({ scale: 'c', temperature });
-  }
+  handleCelsiusChange = temperature => {
+    this.setState({
+      temperature:temperature,
+      scale: 'c',
+    });
+  };
 
-  handleFahrenheitChange=(temperature)=>{
-    this.setState({ scale: 'f', temperature });
-  }
+  handleFahrenheitChange = temperature => {
+    this.setState({
+      scale: 'f',
+      temperature:temperature,
+    });
+  };
 
   render() {
-    const scale = this.state.scale;
-    const temperature = this.state.temperature;
-    const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
-    const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+    // const temperature = this.state.temperature;
+    // const scale = this.state.scale;
+    const celsius =
+        this.state.scale === 'f' ? tryConvert(this.state.temperature, toCelsius)
+        : this.state.temperature;
+
+    const fahrenheit =
+      this.state.scale === 'c' ? tryConvert(this.state.temperature, toFahrenheit)
+        : this.state.temperature;
 
     return (
       <div>
@@ -66,4 +80,3 @@ export default Calculator;
 //*
 // this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
 // this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
-
