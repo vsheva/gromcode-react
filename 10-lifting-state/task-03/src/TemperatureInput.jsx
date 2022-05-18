@@ -8,7 +8,7 @@ const scaleNames = {
 class TemperatureInput extends React.Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
+
   }
 
   handleChange = e => {
@@ -30,4 +30,4 @@ class TemperatureInput extends React.Component {
 
 export default TemperatureInput;
 
-//*
+//* this.handleChange = this.handleChange.bind(this);

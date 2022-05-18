@@ -20,20 +20,20 @@ function tryConvert(temperature, convert) {
   return rounded.toString();
 }
 
+
+
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
-    this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
-
+   //*
     this.state = { temperature: '', scale: 'c' };
   }
 
-  handleCelsiusChange(temperature) {
+  handleCelsiusChange=(temperature)=>{
     this.setState({ scale: 'c', temperature });
   }
 
-  handleFahrenheitChange(temperature) {
+  handleFahrenheitChange=(temperature)=>{
     this.setState({ scale: 'f', temperature });
   }
 
@@ -64,3 +64,6 @@ class Calculator extends React.Component {
 export default Calculator;
 
 //*
+// this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+// this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+
