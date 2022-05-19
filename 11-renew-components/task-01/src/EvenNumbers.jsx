@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 
 class EvenNumbers extends React.Component {
   shouldComponentUpdate(nextProps) {
