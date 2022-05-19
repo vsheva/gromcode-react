@@ -26,6 +26,7 @@ class App extends Component {
         <EvenNumbers title="Even numbers" number={this.state.number} />
         <Numbers title="All numbers" number={this.state.number} />
         <OddNumbers title="Odd numbers" number={this.state.number} />
+        <Numbers title="Just 17" number={17} />
       </div>
     );
   }
@@ -33,4 +34,4 @@ class App extends Component {
 
 export default App;
 
-//<Numbers title="All numbers" number={17} />
+//
