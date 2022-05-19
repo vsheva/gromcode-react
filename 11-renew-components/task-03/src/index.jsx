@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import TemperatureInput from './EvenNumbers.jsx';
+import App from './App.jsx';
 
 const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<TemperatureInput userId="facebook" />, rootElem);
+ReactDOM.render(<App userId="github" />, rootElem);
