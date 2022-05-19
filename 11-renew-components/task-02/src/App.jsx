@@ -20,7 +20,7 @@ class App extends Component {
         <button className="btn" onClick={this.showDialog}>
           Show dialog
         </button>
-        <Dialog isOpen={this.state.isOpen} title="Some text" onClick={this.hideDialog}>
+        <Dialog isOpen={this.state.isOpen} title="Some text" onClose={this.hideDialog}>
           <div className="dialog__content">
             <p>Use immutable array methods to work with data. It will help to avoid bugs</p>
           </div>
