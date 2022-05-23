@@ -1,40 +1,37 @@
-import React, { Component } from 'react';
-import ShoppingCart from './ShoppingCart.jsx';
-import Profile from './Profile.jsx';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Products from './Products.jsx';
+import Home from './Home.jsx';
 
-class App extends Component {
-  state = {
-    userData: {
-      firstName: 'John',
-      lastName: 'Doe',
-    },
-  };
-
-  handleChange = event => {
-    const { name, value } = event.target; //?
-    this.setState({
-      userData: {
-        ...this.state.userData, //магия ?
-        [name]: value, //магия ?
-      },
-    });
-  };
-  render() {
-      const{userData} = this.state
-    return (
-      <div className="page">
-          <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
-        <main className="content">
-          <ShoppingCart userName={userData.firstName} />
-          <Profile userData={userData} handleChange={this.handleChange} />
-        </main>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="page">
+      <BrowserRouter>
+        <ul className="navigation">
+          <li className="navigation__item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="navigation__item">
+            <Link to="/products">Products</Link>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/products" component={Products} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;
 
-//const {userData} = this.state
+//path="*"
+//path="/*"
 
-//  <ShoppingCart userData={userData} />
+//<Route path='/products' component={Products}>
+// нужно компоненту Products
+//передать через свойство component={Products}
