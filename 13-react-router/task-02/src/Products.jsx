@@ -55,7 +55,7 @@ export default Products;
 //
 // export default Products;
 
-//params
+//params and  component={Product
 
 // const Products = () => {
 //     return (
