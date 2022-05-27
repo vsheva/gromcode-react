@@ -8,6 +8,7 @@ import PageNotFound from './PageNotFound.jsx';
 const App = () => {
   return (
     <div class="page">
+
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
@@ -20,16 +21,17 @@ const App = () => {
           <Route path="/contacts">
             <Contacts />
           </Route>
-          <Route path="/*">
+          <Route path="*">
             <PageNotFound />
           </Route>
         </Switch>
       </BrowserRouter>
+
     </div>
   );
 };
 
 export default App;
 
-//path="*"
+//path="*" любой путь
 //path="/*"
