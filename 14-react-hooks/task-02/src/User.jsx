@@ -14,7 +14,7 @@ const User = ({ match }) => {
       .then(userData => {
         setUserData(userData);
       });
-  });
+  }, [match.params.userId]);
 
   if (!userData) {
     return null;
@@ -93,9 +93,8 @@ export default User;
 //     );
 //   }
 // }
-//
-// export default User;
 
+// export default User;
 
 //сырой код
 
