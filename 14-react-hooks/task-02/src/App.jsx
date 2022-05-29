@@ -18,7 +18,7 @@ const App = () => {
           </ul>
 
           <Switch>
-            <Route path="/users/:userId" component={User}></Route>
+            <Route path="/users/:userId"> <User /></Route>
             <Route path="/">
               <span>Select a user please</span>
             </Route>
@@ -30,6 +30,8 @@ const App = () => {
 };
 
 export default App;
+
+// <Route path="/users/:userId" component={User}></Route>
 
 //strarting code
 
