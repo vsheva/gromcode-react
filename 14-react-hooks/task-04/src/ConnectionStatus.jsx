@@ -7,6 +7,7 @@ const ConnectionStatus = () => {
     const handleOnline = () => {
       setStatus('online');
     };
+
     const handleOffline = () => {
       setStatus('offline');
     };
@@ -15,16 +16,12 @@ const ConnectionStatus = () => {
     window.addEventListener('offline', handleOffline);
 
     return () => {
-      window.removeEventListener('online', handleOffline);
+      window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, []);
+  });
 
-  return (
-    <div>
-      <div className={`status ${status === 'offline' ? 'status_offline' : ''}`}>{status}</div>
-    </div>
-  );
+  return <div className={`status ${status==="offline"? "status_offline": ""}`}>{status}</div>;
 };
 
 export default ConnectionStatus;
@@ -66,10 +63,8 @@ export default ConnectionStatus;
 //
 //   render() {
 //     return (
-//       <div>
 //         <div className ={ this.state.status==='offline' ? "status__offline" :"status"}>
 //           {this.state.status}
-//         </div>
 //       </div>
 //     );
 //   }
