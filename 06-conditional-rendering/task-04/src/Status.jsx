@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Online from './Online.jsx';
 import Offline from './Offline.jsx';
 
-// class Status extends Component {
+// class ConnectionStatus extends Component {
 //   constructor(props) {
 //     super(props);
 //

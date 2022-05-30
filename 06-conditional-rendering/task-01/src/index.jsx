@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Status from './Status.jsx';
+import ConnectionStatus from './ConnectionStatus.jsx';
 
 const rootElem = document.querySelector('#root');
 //const element = <Game />
 
-ReactDOM.render(<Status />, rootElem);
+ReactDOM.render(<ConnectionStatus />, rootElem);
