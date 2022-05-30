@@ -5,4 +5,4 @@ import ConnectionStatus from './ConnectionStatus.jsx';
 
 const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<ConnectionStatus  />, rootElem);
+ReactDOM.render(<ConnectionStatus />, rootElem);

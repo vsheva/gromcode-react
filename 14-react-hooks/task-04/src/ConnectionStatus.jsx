@@ -1,41 +1,33 @@
-import React, {useState, useEffect} from 'react';
-
+import React, { useState, useEffect } from 'react';
 
 const ConnectionStatus = () => {
+  const [status, setStatus] = useState('online');
 
-    const [status, setStatus] = useState({status:"online"})
+  useEffect(() => {
+    const handleOnline = () => {
+      setStatus('online');
+    };
+    const handleOffline = () => {
+      setStatus('offline');
+    };
 
-    useEffect(() => {
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
-        const handleOnline = () => {
-            setStatus({status:"online"});
-        }
-        const handleOffline = () => {
-            setStatus({status:"online"});
-        }
+    return () => {
+      window.removeEventListener('online', handleOffline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
-        window.addEventListener("online", handleOnline)
-        window.addEventListener("offline",handleOffline)
-
-        return () => {
-            window.removeEventListener("online", handleOffline)
-            window.removeEventListener("offline", handleOffline)
-        }
-    }, [])
-
-
-    return (
-        <div>
-            <div className={status === 'offline' ? "status_offline" : "status"}>
-                {status}
-            </div>
-        </div>
-    );
-
-}
+  return (
+    <div>
+      <div className={`status ${status === 'offline' ? 'status_offline' : ''}`}>{status}</div>
+    </div>
+  );
+};
 
 export default ConnectionStatus;
-
 
 //
 //
@@ -83,5 +75,3 @@ export default ConnectionStatus;
 //   }
 // }
 //
-
-
