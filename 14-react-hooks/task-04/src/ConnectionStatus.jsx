@@ -3,15 +3,15 @@ import React, {useState, useEffect} from 'react';
 
 const ConnectionStatus = () => {
 
-    const [status, setStatus] = useState("online")
+    const [status, setStatus] = useState({status:"online"})
 
     useEffect(() => {
 
         const handleOnline = () => {
-            setStatus("online");
+            setStatus({status:"online"});
         }
         const handleOffline = () => {
-            setStatus("offline");
+            setStatus({status:"online"});
         }
 
         window.addEventListener("online", handleOnline)
